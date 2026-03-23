@@ -179,7 +179,7 @@ input:focus {
 .erro {
     color: #c92a2a;
     font-size: 14px;
-    margin: 4px 0 12px 0;
+    margin: 4px 0 12px;
     min-height: 20px;
     display: block;
 }
