@@ -9,90 +9,230 @@
 :root {
     --cor-fundo: #e9e9e9;
     --cor-texto: #303030;
-    --branco: #fff; 
+    --branco: #fff;
 }
 
 body {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     min-height: 100vh;
+    color: var(--cor-texto);
 }
-
 
 .pagina-dashboard {
-    color: var(--cor-texto);
-    line-height: 1.5;
     background-color: var(--cor-fundo);
+    line-height: 1.5;
 }
 
-.pagina-dashboard main {
-    flex: 1; 
+.pagina-login {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+
+.pular-navegacao,
+.link-acessibilidade {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 100;
+}
+
+.pular-navegacao:focus,
+.link-acessibilidade:focus {
+    top: 0;
+}
+
+
+main {
+    flex: 1;
     padding: 20px;
 }
 
-.pagina-dashboard h1 { font-size: 1.8rem; }
-.pagina-dashboard h2 { font-size: 1.5rem; margin-bottom: 25px; line-height: 1.2; }
-.pagina-dashboard img { width: 50px; height: 50px; border-radius: 50%; }
-
-.sidebar { background-color: #333; color: var(--branco); padding: 15px 20px; }
-.sidebar strong { display: block; font-size: 1.2rem; margin-bottom: 10px; }
-.sidebar nav { display: flex; gap: 15px; }
-.sidebar a { color: var(--branco); text-decoration: none; font-size: 0.95rem; }
-
-.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-
-.dashboard-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
-
-.card { background-color: var(--branco); border: 1px solid #ccc; border-radius: 10px; overflow: hidden; }
-.card header { background-color: #f5f5f5; padding: 12px 15px; border-bottom: 1px solid #ccc; text-align: left; margin-bottom: 0; }
-.card h3 { font-size: 1.1rem; font-weight: bold; }
-.card p { padding: 10px 15px; font-size: 0.95rem; line-height: 1.4; }
-
-
-.pular-navegacao { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(100%); white-space: nowrap; border-width: 0; }
-.pular-navegacao:focus { position: absolute; top: 15px; left: 15px; width: auto; height: auto; padding: 10px 15px; margin: 0; overflow: visible; clip-path: none; white-space: normal; background-color: var(--cor-texto); color: var(--branco); border-radius: 5px; z-index: 1000; text-decoration: none; font-weight: bold; }
-
-
-.pagina-login {
-    color: #1a1a1a;
-    background-color: #ffffff;
-}
-
 .pagina-login main {
-    display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: center;
     padding: 24px;
     width: 100%;
 }
 
-.pagina-login header { text-align: center; margin-bottom: 32px; }
-.pagina-login header img { height: 72px; width: 72px; margin: 0 auto 16px auto; display: block; border-radius: 0; }
-.pagina-login h1 { font-size: 28px; }
+h1 {
+    font-size: 1.8rem;
+}
 
-.pagina-login form { display: flex; flex-direction: column; }
-.pagina-login label { font-size: 16px; margin-bottom: 8px; font-weight: bold; }
-.pagina-login input { padding: 12px; border: 1px solid #eaeaeb; border-radius: 4px; font-size: 16px; outline: none; }
-.pagina-login input:focus { border-color: #1a1a1a; }
+.pagina-login h1 {
+    font-size: 28px;
+}
 
-.erro { color: #c92a2a; font-size: 14px; margin-top: 4px; margin-bottom: 12px; min-height: 20px; display: block; }
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 
-.pagina-login button { padding: 14px; background-color: #eaeaeb; color: #1a1a1a; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 8px; }
-.pagina-login button:hover { background-color: #d4d4d5; }
-.pagina-login footer { text-align: center; padding: 24px; font-size: 14px; }
+.pagina-login img {
+    height: 72px;
+    width: 72px;
+    margin: 0 auto 16px;
+    display: block;
+    border-radius: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.sidebar {
+    background: #333;
+    color: var(--branco);
+    padding: 15px 20px;
+}
+
+.sidebar strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.sidebar nav {
+    display: flex;
+    gap: 15px;
+}
+
+.sidebar a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background: var(--branco);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card header {
+    background: #f5f5f5;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+}
+
+.card p {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
 
 
-.link-acessibilidade { position: absolute; top: -50px; left: 0; background-color: #1a1a1a; color: #ffffff; padding: 8px 16px; text-decoration: none; font-weight: bold; z-index: 100; }
-.link-acessibilidade:focus { top: 0; }
+.pagina-login header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #eaeaeb;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #1a1a1a;
+}
+
+.erro {
+    color: #c92a2a;
+    font-size: 14px;
+    margin: 4px 0 12px 0;
+    min-height: 20px;
+    display: block;
+}
+
+button {
+    padding: 14px;
+    background: #eaeaeb;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: #d4d4d5;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+}
 
 
-@media (min-width: 768px) {
-    
-    .pagina-dashboard { flex-direction: row; }
-    .pagina-dashboard .sidebar { width: 250px; height: 100vh; display: flex; flex-direction: column; }
-    .pagina-dashboard .sidebar nav { flex-direction: column; margin-top: 15px; }
-    .pagina-dashboard .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+@media (width >= 768px) {
+    .pagina-dashboard {
+        flex-direction: row;
+    }
 
-    .pagina-login main { border: 1px solid #eaeaeb; border-radius: 8px; margin: 64px auto; max-width: 400px; flex: none; padding: 40px; }
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar nav {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pagina-login main {
+        border: 1px solid #eaeaeb;
+        border-radius: 8px;
+        margin: 64px auto;
+        max-width: 400px;
+        flex: none;
+        padding: 40px;
+    }
 }
