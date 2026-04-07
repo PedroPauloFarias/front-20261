@@ -1,0 +1,59 @@
+.sidebar {
+    background: #333;
+    color: var(--branco);
+    padding: 15px 20px;
+}
+
+.sidebar strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.sidebar nav {
+    display: flex;
+    gap: 15px;
+}
+
+.sidebar a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+/* No Mobile, a gente esconde o menu lateral para não estourar a tela */
+.sidebar {
+    display: none; 
+}
+
+/* Responsividade: Quando a tela for de tablet/PC, ele aparece do lado esquerdo */
+@media (width >= 768px) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 100vh;
+        background: #333;
+        color: var(--branco);
+        padding: 30px 20px;
+        flex-shrink: 0;
+    }
+
+    .sidebar strong {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .sidebar nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sidebar a {
+        color: var(--branco);
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+}
