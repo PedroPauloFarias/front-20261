@@ -1,0 +1,14 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.topbar img {
+    width: 48px;  
+    height: 48px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}

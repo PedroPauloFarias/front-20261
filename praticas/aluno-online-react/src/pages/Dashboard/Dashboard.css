@@ -1,0 +1,17 @@
+.pagina-dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.dashboard-grid {
+    display: grid;
+    gap: 20px;
+    align-items: start;
+}
+
+@media (width >= 768px) {
+    .pagina-dashboard { flex-direction: row; }
+    .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+}
