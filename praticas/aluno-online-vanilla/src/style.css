@@ -1,5 +1,4 @@
-
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +28,6 @@ body {
     color: #1a1a1a;
 }
 
-
 .pular-navegacao,
 .link-acessibilidade {
     position: absolute;
@@ -47,7 +45,6 @@ body {
 .link-acessibilidade:focus {
     top: 0;
 }
-
 
 main {
     flex: 1;
@@ -147,7 +144,6 @@ h2 {
     line-height: 1.4;
 }
 
-
 .pagina-login header {
     text-align: center;
     margin-bottom: 32px;
@@ -204,7 +200,6 @@ footer {
     padding: 24px;
     font-size: 14px;
 }
-
 
 @media (width >= 768px) {
     .pagina-dashboard {

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aluno Online</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <strong>Aluno Online</strong>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Disciplinas</a>
+        <a href="#">Calendário</a>
+      </nav>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <h1>Olá, Aluno!</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Avatar do usuário">
+      </header>
+
+      <h2>Bem-vindo ao portal do aluno</h2>
+
+      <section class="dashboard-grid">
+        
+        <article class="card">
+          <header>Mural de Avisos</header>
+          <p>Inscrição para o projeto de extensão</p>
+          <p>Eleição para representante de turma</p>
+        </article>
+
+        <article class="card">
+          <header>Calendário Acadêmico</header>
+          <p>23/02 - Início do período letivo 2026-1</p>
+          <p>25/04 - Prazo final para aplicação da P1</p>
+          <p>23/06 - Prazo final para aplicação da P2</p>
+          <p>04/07 - Fim do período letivo 2026-1</p>
+        </article>
+
+        <article class="card">
+          <header>Minhas Disciplinas</header>
+          <p>Desenvolvimento Web Vanilla</p>
+          <p>Banco de Dados Relacional</p>
+        </article>
+
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
