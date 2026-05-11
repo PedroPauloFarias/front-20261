@@ -1,19 +1,34 @@
 import './Faltas.css';
 import { Sidebar } from '../../components/Sidebar/Sidebar';
 import { Topbar } from '../../components/Topbar/Topbar';
+import { Card } from '../../components/Card/Card';
 
 export function Faltas() {
     return (
         <div className="pagina-faltas">
-            {/* Componente Estrutural 1 */}
+            <a href="#conteudo-principal" className="pular-navegacao">Pular para o conteúdo principal</a>
             <Sidebar />
-
             <main id="conteudo-principal">
-                {/* Componente Estrutural 2 */}
                 <Topbar />
-                
                 <h2>Listagem de Faltas</h2>
-                {/* ... resto do conteúdo de faltas ... */}
+                <section className="faltas-grid">
+                    <Card
+                        titulo="BI e Data Warehousing"
+                        rodapeTexto="Status: Dentro do limite"
+                        rodapeCor="cor-sucesso"
+                    >
+                        <p><strong>Faltas registradas:</strong> 2</p>
+                        <p><strong>Limite permitido:</strong> 10</p>
+                    </Card>
+                    <Card
+                        titulo="Construção de Frontend"
+                        rodapeTexto="Status: Risco de reprovação"
+                        rodapeCor="cor-alerta"
+                    >
+                        <p><strong>Faltas registradas:</strong> 8</p>
+                        <p><strong>Limite permitido:</strong> 10</p>
+                    </Card>
+                </section>
             </main>
         </div>
     );

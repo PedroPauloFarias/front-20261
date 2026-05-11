@@ -1,53 +1,20 @@
 .pagina-boletos {
-    background-color: var(--cor-fundo);
-    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .boletos-grid {
     display: grid;
     gap: 20px;
+    align-items: start;
 }
 
-.card-boleto {
-    background: var(--branco);
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-}
+.status-aberto { color: #c92a2a; font-weight: bold; }
+.status-pago { color: #2b8a3e; font-weight: bold; }
 
-.card-boleto header {
-    background: #f5f5f5;
-    padding: 12px 15px;
-    border-bottom: 1px solid #ccc;
-}
-
-.card-boleto h3 {
-    font-size: 1.1rem;
-}
-
-.card-boleto p {
-    padding: 10px 15px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-.status-aberto {
-    color: #c92a2a;
-    font-weight: bold;
-}
-
-.status-pago {
-    color: #2b8a3e;
-    font-weight: bold;
-}
-
-/* Responsividade: Desktop */
 @media (width >= 768px) {
-    .pagina-boletos {
-        flex-direction: row; /* Coloca a Sidebar ao lado do Conteúdo */
-    }
-
-    .boletos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .pagina-boletos { flex-direction: row; }
+    .boletos-grid { grid-template-columns: repeat(2, 1fr); }
 }

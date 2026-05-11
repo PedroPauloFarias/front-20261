@@ -1,54 +1,20 @@
 .pagina-faltas {
-    background-color: var(--cor-fundo);
-    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .faltas-grid {
     display: grid;
     gap: 20px;
+    align-items: start;
 }
 
-.card-falta {
-    background: var(--branco);
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-}
+.status-ok { color: #2b8a3e; font-weight: bold; }
+.status-alerta { color: #c92a2a; font-weight: bold; }
 
-.card-falta header {
-    background: #f5f5f5;
-    padding: 12px 15px;
-    border-bottom: 1px solid #ccc;
-}
-
-.card-falta h3 {
-    font-size: 1.1rem;
-}
-
-.card-falta p {
-    padding: 10px 15px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-/* Cores específicas para os status das faltas */
-.status-ok {
-    color: #2b8a3e;
-    font-weight: bold;
-}
-
-.status-alerta {
-    color: #c92a2a;
-    font-weight: bold;
-}
-
-/* Responsividade da página de Faltas */
 @media (width >= 768px) {
-    .pagina-faltas {
-        flex-direction: row; /* Alinha a Sidebar ao lado do Main no Desktop */
-    }
-
-    .faltas-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .pagina-faltas { flex-direction: row; }
+    .faltas-grid { grid-template-columns: repeat(2, 1fr); }
 }

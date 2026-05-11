@@ -1,51 +1,20 @@
 .pagina-requerimentos {
-    background-color: var(--cor-fundo);
-    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .requerimentos-grid {
     display: grid;
     gap: 20px;
+    align-items: start;
 }
 
-.card-requerimento {
-    background: var(--branco);
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-}
+.req-concluido { color: #2b8a3e; font-weight: bold; }
+.req-andamento { color: #1971c2; font-weight: bold; }
 
-.card-requerimento header {
-    background: #f5f5f5;
-    padding: 12px 15px;
-    border-bottom: 1px solid #ccc;
-}
-
-.card-requerimento h3 {
-    font-size: 1.1rem;
-}
-
-.card-requerimento p {
-    padding: 10px 15px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-.req-concluido {
-    color: #2b8a3e;
-}
-
-.req-andamento {
-    color: #1971c2;
-}
-
-/* Responsividade: Desktop */
 @media (width >= 768px) {
-    .pagina-requerimentos {
-        flex-direction: row; /* Coloca a Sidebar ao lado do Conteúdo */
-    }
-
-    .requerimentos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .pagina-requerimentos { flex-direction: row; }
+    .requerimentos-grid { grid-template-columns: repeat(2, 1fr); }
 }

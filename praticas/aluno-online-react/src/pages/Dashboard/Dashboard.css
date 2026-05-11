@@ -1,50 +1,17 @@
-/* 1. O SEGREDO ESTÁ AQUI: Transformar a div principal em um contêiner Flex */
 .pagina-dashboard {
     display: flex;
-    flex-direction: column; /* Mobile primeiro: menu em cima, conteúdo embaixo */
-    min-height: 100vh;      /* Ocupa pelo menos 100% da altura da tela */
-    width: 100%;            /* Ocupa 100% da largura */
-    background-color: var(--cor-fundo);
-    line-height: 1.5;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .dashboard-grid {
     display: grid;
     gap: 20px;
-    align-items: start; /* Impede que os cards estiquem verticalmente até o fim da tela, tirando o aspecto "gigante" */
+    align-items: start;
 }
 
-.card {
-    background: var(--branco);
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.card header {
-    background: #f5f5f5;
-    padding: 12px 15px;
-    border-bottom: 1px solid #ccc;
-}
-
-.card h3 {
-    font-size: 1.1rem;
-}
-
-.card p {
-    padding: 10px 15px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-/* Responsividade da Dashboard (Telas maiores) */
 @media (width >= 768px) {
-    .pagina-dashboard {
-        flex-direction: row; /* Coloca a Sidebar na esquerda e o Main na direita */
-    }
-
-    .dashboard-grid {
-        /* Cria 2 colunas com tamanhos iguais */
-        grid-template-columns: repeat(2, 1fr); 
-    }
+    .pagina-dashboard { flex-direction: row; }
+    .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
 }
