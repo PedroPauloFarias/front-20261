@@ -7,7 +7,7 @@ import { Requerimentos } from './pages/Requerimentos/Requerimentos';
 export default function App() {
   return (
     <>
-      <Dashboard /> 
+      <Dashboard />
       {/* <Faltas /> */}
       {/* <Notas /> */}
       {/* <Boletos /> */}

@@ -12,15 +12,14 @@ export function Requerimentos() {
                 <Topbar />
                 <h2>Listagem de Requerimentos</h2>
                 <section className="requerimentos-grid">
-                    <Card 
+                    <Card
                         titulo="Declaração de Matrícula"
                         rodapeTexto="Status: Disponível para download"
                         rodapeCor="cor-sucesso"
                     >
                         <p><strong>Data da solicitação:</strong> 05/04/2026</p>
                     </Card>
-
-                    <Card 
+                    <Card
                         titulo="Histórico Escolar"
                         rodapeTexto="Status: Em análise pela secretaria"
                         rodapeCor="cor-info"
