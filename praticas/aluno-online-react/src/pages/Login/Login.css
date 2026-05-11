@@ -1,0 +1,94 @@
+.pagina-login {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+.pagina-login main {
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    width: 100%;
+}
+
+/* Sobrescritas específicas do Login em relação ao global */
+.pagina-login h1 {
+    font-size: 28px;
+}
+
+.pagina-login img {
+    height: 72px;
+    width: 72px;
+    margin: 0 auto 16px;
+    display: block;
+    border-radius: 0;
+}
+
+.pagina-login header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Estilos de Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #eaeaeb;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #1a1a1a;
+}
+
+.erro {
+    color: #c92a2a;
+    font-size: 14px;
+    margin: 4px 0 12px;
+    min-height: 20px;
+    display: block;
+}
+
+button {
+    padding: 14px;
+    background: #eaeaeb;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: #d4d4d5;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+}
+
+/* Responsividade do Login */
+@media (width >= 768px) {
+    .pagina-login main {
+        border: 1px solid #eaeaeb;
+        border-radius: 8px;
+        margin: 64px auto;
+        max-width: 400px;
+        flex: none;
+        padding: 40px;
+    }
+}
