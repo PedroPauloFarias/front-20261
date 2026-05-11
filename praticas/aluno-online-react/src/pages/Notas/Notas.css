@@ -1,20 +1,11 @@
-.pagina-notas {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-}
-
 .notas-grid {
-    display: grid;
-    gap: 20px;
-    align-items: start;
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
 }
-
-.media-aprovado { color: #2b8a3e; font-weight: bold; }
-.media-pendente { color: #e67700; font-weight: bold; }
 
 @media (width >= 768px) {
-    .pagina-notas { flex-direction: row; }
-    .notas-grid { grid-template-columns: repeat(2, 1fr); }
+  .notas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
