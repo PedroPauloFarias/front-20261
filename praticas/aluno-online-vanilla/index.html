@@ -1,12 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aluno Online</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-dashboard">
+
+    <a href="#conteudo-principal" class="pular-navegacao">Pular para o conteúdo principal</a>
+
+    <aside class="sidebar">
+        <strong>Aluno Online</strong>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Disciplinas</a>
+            <a href="#">Calendário</a>
+        </nav>
+    </aside>
+
+    <main id="conteudo-principal">
+        <header class="topbar">
+            <h1>Olá, Aluno!</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Avatar do usuário">
+        </header>
+
+        <h2>Bem-vindo ao portal do aluno</h2>
+
+        <section class="dashboard-grid">
+            <article class="card">
+                <header><h3>Mural de Avisos</h3></header>
+                <p>Inscrição para o projeto de extensão</p>
+                <p>Eleição para representante de turma</p>
+            </article>
+
+            <article class="card">
+                <header><h3>Calendário Acadêmico</h3></header>
+                <p>23/02 - Início do período letivo 2026-1</p>
+                <p>25/04 - Prazo final para aplicação da P1</p>
+                <p>23/06 - Prazo final para aplicação da P2</p>
+                <p>04/07 - Fim do período letivo 2026-1</p>
+            </article>
+
+            <article class="card">
+                <header><h3>Minhas Disciplinas</h3></header>
+                <p>BI e Data Warehousing</p>
+                <p>Construção de Frontend</p>
+            </article>
+        </section>
+    </main>
+
     <script type="module" src="/src/main.js"></script>
-  </body>
+</body>
 </html>

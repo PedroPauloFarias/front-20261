@@ -1,38 +1,38 @@
 .card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .card-header {
-    background-color: #f5f5f5;
-    padding: 12px 15px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .card-header h3 {
-    font-size: 1.1rem;
-  }
-  
-  .card-corpo {
-    padding: 10px 15px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-  
-  .card-corpo p {
-    margin-bottom: 4px;
-  }
-  
-  .card-rodape {
-    padding: 10px 15px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    border-top: 1px solid #ccc;
-  }
-  
-  .cor-sucesso { color: #2b8a3e; }
-  .cor-alerta { color: #c92a2a; }
-  .cor-info { color: #1971c2; }
-  .cor-pendente { color: #e67700; }
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #f5f5f5;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-header h3 {
+  font-size: 1.1rem;
+}
+
+.card-corpo {
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card-corpo p {
+  margin-bottom: 4px;
+}
+
+.card-rodape {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+}
+
+.cor-sucesso { color: #2b8a3e; }
+.cor-alerta { color: #c92a2a; }
+.cor-info { color: #1971c2; }
+.cor-pendente { color: #e67700; }
