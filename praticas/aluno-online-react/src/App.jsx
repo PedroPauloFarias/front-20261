@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { useAuth } from './contexts/AuthContext';
+import { useAuth } from './contexts/useAuth';
 import { Layout } from './layouts/Layout';
 import { Login } from './pages/Login/Login';
 import { Dashboard } from './pages/Dashboard/Dashboard';
@@ -7,7 +7,6 @@ import { Faltas } from './pages/Faltas/Faltas';
 import { Notas } from './pages/Notas/Notas';
 import { Boletos } from './pages/Boletos/Boletos';
 import { Requerimentos } from './pages/Requerimentos/Requerimentos';
-import { useAuth } from './contexts/useAuth';
 
 export default function App() {
   const { autenticado } = useAuth();

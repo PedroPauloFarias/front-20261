@@ -1,6 +1,5 @@
-import { useAuth } from '../../contexts/AuthContext';
-import './Topbar.css';
 import { useAuth } from '../../contexts/useAuth';
+import './Topbar.css';
 
 export function Topbar() {
   const { usuario } = useAuth();
