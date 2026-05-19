@@ -7,6 +7,7 @@ import { Faltas } from './pages/Faltas/Faltas';
 import { Notas } from './pages/Notas/Notas';
 import { Boletos } from './pages/Boletos/Boletos';
 import { Requerimentos } from './pages/Requerimentos/Requerimentos';
+import { useAuth } from './contexts/useAuth';
 
 export default function App() {
   const { autenticado } = useAuth();
