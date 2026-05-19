@@ -1,68 +1,46 @@
 .pagina-login {
-    background-color: #fff;
-    color: #1a1a1a;
-}
-
-.pagina-login main {
-    flex-direction: column;
+    display: flex;
     justify-content: center;
-    padding: 24px;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+  
+  .login-caixa {
     width: 100%;
-}
-
-/* Sobrescritas específicas do Login em relação ao global */
-.pagina-login h1 {
-    font-size: 28px;
-}
-
-.pagina-login img {
-    height: 72px;
-    width: 72px;
-    margin: 0 auto 16px;
-    display: block;
-    border-radius: 0;
-}
-
-.pagina-login header {
+    max-width: 400px;
+    padding: 40px;
+    border: 1px solid #eaeaeb;
+    border-radius: 8px;
+  }
+  
+  .login-cabecalho {
     text-align: center;
     margin-bottom: 32px;
-}
-
-/* Estilos de Formulário */
-form {
+  }
+  
+  .login-cabecalho img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .login-cabecalho h1 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+  }
+  
+  .pagina-login form {
     display: flex;
     flex-direction: column;
-}
-
-label {
-    font-size: 16px;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input {
-    padding: 12px;
-    border: 1px solid #eaeaeb;
-    border-radius: 4px;
-    font-size: 16px;
-    outline: none;
-}
-
-input:focus {
-    border-color: #1a1a1a;
-}
-
-.erro {
-    color: #c92a2a;
-    font-size: 14px;
-    margin: 4px 0 12px;
-    min-height: 20px;
-    display: block;
-}
-
-button {
+  }
+  
+  .pagina-login button {
     padding: 14px;
-    background: #eaeaeb;
+    background-color: #eaeaeb;
     border: none;
     border-radius: 4px;
     font-size: 16px;

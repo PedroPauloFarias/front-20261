@@ -1,30 +1,71 @@
+import { useState } from 'react';
+import { InputField } from '../../components/InputField/InputField';
 import './Login.css';
 
 export function Login() {
-    return (
-        <div className="pagina-login">
-            <main id="conteudo-principal">
-                <header>
-                    <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Icone de chapeu" />
-                    <h1>Aluno Online</h1>
-                </header>
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [erroEmail, setErroEmail] = useState('');
+  const [erroSenha, setErroSenha] = useState('');
 
-                <form id="formLogin">
-                    <label htmlFor="email">E-mail</label>
-                    <input type="email" id="email" name="email" />
-                    <span id="emailErro" className="erro"></span>
+  function handleSubmit(event) {
+    event.preventDefault();
 
-                    <label htmlFor="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" />
-                    <span id="senhaErro" className="erro"></span>
+    let valido = true;
 
-                    <button type="button" id="botaoEntrar">Entrar</button>
-                </form>
-            </main>
+    if (!email) {
+      setErroEmail('O e-mail é obrigatório.');
+      valido = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setErroEmail('Informe um e-mail válido.');
+      valido = false;
+    } else {
+      setErroEmail('');
+    }
 
-            <footer>
-                <p>&copy; 2026. Todos os direitos reservados.</p>
-            </footer>
-        </div>
-    );
+    if (!senha) {
+      setErroSenha('A senha é obrigatória.');
+      valido = false;
+    } else if (senha.length < 6) {
+      setErroSenha('A senha deve ter no mínimo 6 caracteres.');
+      valido = false;
+    } else {
+      setErroSenha('');
+    }
+
+    if (valido) {
+      alert('Login realizado com sucesso!');
+    }
+  }
+
+  return (
+    <div className="pagina-login">
+      <main className="login-caixa">
+        <header className="login-cabecalho">
+          <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Logo" />
+          <h1>Aluno Online</h1>
+        </header>
+
+        <form onSubmit={handleSubmit}>
+          <InputField
+            id="email"
+            label="E-mail"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            erro={erroEmail}
+          />
+          <InputField
+            id="senha"
+            label="Senha"
+            type="password"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+            erro={erroSenha}
+          />
+          <button type="submit">Entrar</button>
+        </form>
+      </main>
+    </div>
+  );
 }
