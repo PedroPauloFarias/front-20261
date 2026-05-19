@@ -1,68 +1,45 @@
 import { useState } from 'react';
-import { InputField } from '../../components/InputField/InputField';
+import { useAuth } from '../../contexts/useAuth';
 import './Login.css';
 
 export function Login() {
+  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const [erroEmail, setErroEmail] = useState('');
-  const [erroSenha, setErroSenha] = useState('');
+  const [erro, setErro] = useState('');
 
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    let valido = true;
-
-    if (!email) {
-      setErroEmail('O e-mail é obrigatório.');
-      valido = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setErroEmail('Informe um e-mail válido.');
-      valido = false;
-    } else {
-      setErroEmail('');
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!email || !senha) {
+      setErro('Preencha todos os campos.');
+      return;
     }
-
-    if (!senha) {
-      setErroSenha('A senha é obrigatória.');
-      valido = false;
-    } else if (senha.length < 6) {
-      setErroSenha('A senha deve ter no mínimo 6 caracteres.');
-      valido = false;
-    } else {
-      setErroSenha('');
-    }
-
-    if (valido) {
-      alert('Login realizado com sucesso!');
-    }
+    login({ email });
   }
 
   return (
     <div className="pagina-login">
-      <main className="login-caixa">
-        <header className="login-cabecalho">
+      <main>
+        <header>
           <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Logo" />
           <h1>Aluno Online</h1>
         </header>
-
         <form onSubmit={handleSubmit}>
-          <InputField
+          <label htmlFor="email">E-mail</label>
+          <input
             id="email"
-            label="E-mail"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            erro={erroEmail}
           />
-          <InputField
+          <label htmlFor="senha">Senha</label>
+          <input
             id="senha"
-            label="Senha"
             type="password"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
-            erro={erroSenha}
           />
+          <span className="erro">{erro}</span>
           <button type="submit">Entrar</button>
         </form>
       </main>

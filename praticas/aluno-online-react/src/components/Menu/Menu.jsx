@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import { useAuth } from '../../contexts/useAuth';
 import './Menu.css';
 
 export function Menu() {
+  const { logout } = useAuth();
+
   return (
     <aside className="menu">
       <strong className="menu-titulo">Aluno Online</strong>
@@ -12,6 +15,7 @@ export function Menu() {
         <NavLink to="/boletos">Boletos</NavLink>
         <NavLink to="/requerimentos">Requerimentos</NavLink>
       </nav>
+      <button className="btn-sair" onClick={logout}>Sair</button>
     </aside>
   );
 }
