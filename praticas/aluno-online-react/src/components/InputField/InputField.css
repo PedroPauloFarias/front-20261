@@ -1,0 +1,31 @@
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  
+  .input-field label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .input-field input {
+    padding: 12px;
+    border: 1px solid #eaeaeb;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .input-field input:focus {
+    border-color: #1a1a1a;
+  }
+  
+  .input-erro {
+    color: #c92a2a;
+    font-size: 14px;
+    margin-top: 4px;
+    min-height: 20px;
+    display: block;
+  }
