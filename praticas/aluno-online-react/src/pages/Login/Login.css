@@ -47,8 +47,26 @@
     font-weight: bold;
     cursor: pointer;
     margin-top: 8px;
-  }
-  
-  .pagina-login button:hover {
-    background-color: #d4d4d5;
-  }
+}
+
+button:hover {
+    background: #d4d4d5;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+}
+
+/* Responsividade do Login */
+@media (width >= 768px) {
+    .pagina-login main {
+        border: 1px solid #eaeaeb;
+        border-radius: 8px;
+        margin: 64px auto;
+        max-width: 400px;
+        flex: none;
+        padding: 40px;
+    }
+}
