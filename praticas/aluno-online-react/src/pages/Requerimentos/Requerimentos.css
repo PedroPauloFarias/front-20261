@@ -1,33 +1,32 @@
 .requerimentos-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-  }
-  
-  .requerimentos-header h2 {
-    margin: 0;
-  }
-  
-  .btn-novo-requerimento {
-    padding: 0.55rem 1.2rem;
-    background: var(--cor-primaria, #1976d2);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  
-  .btn-novo-requerimento:hover {
-    background: var(--cor-primaria-escura, #1565c0);
-  }
-  
-  .requerimentos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.requerimentos-header h2 {
+  margin: 0;
+}
+
+.btn-novo-requerimento {
+  padding: 0.55rem 1.2rem;
+  background: var(--cor-primaria, #1976d2);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-novo-requerimento:hover {
+  background: var(--cor-primaria-escura, #1565c0);
+}
+
+.requerimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
