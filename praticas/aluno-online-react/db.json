@@ -1,0 +1,17 @@
+{
+  "requerimentos": [
+    {
+      "id": "1",
+      "tipo": "Segunda Via de Diploma",
+      "descricao": "Solicitação de segunda via do diploma de graduação.",
+      "status": "pendente"
+    },
+    {
+      "tipo": "oi",
+      "descricao": "oiiiiii",
+      "status": "pendente",
+      "id": "bORES8rwOKY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
