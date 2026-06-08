@@ -1,0 +1,19 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.topbar h1 {
+  font-size: 1.4rem;
+}
+
+.topbar img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
