@@ -1,0 +1,10 @@
+{
+    "requerimentos": [
+      {
+        "id": 1,
+        "tipo": "Segunda Via de Diploma",
+        "descricao": "Solicitação de segunda via do diploma de graduação.",
+        "status": "pendente"
+      }
+    ]
+  }

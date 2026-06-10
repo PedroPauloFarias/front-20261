@@ -11,7 +11,6 @@ import { RequerimentoForm } from './forms/RequerimentoForm';
 
 export default function App() {
   const { autenticado } = useAuth();
-
   if (!autenticado) {
     return (
       <Routes>
@@ -20,7 +19,6 @@ export default function App() {
       </Routes>
     );
   }
-
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
