@@ -1,10 +1,18 @@
 import { Outlet, useNavigate, useMatch } from 'react-router-dom';
 import { Card } from '../../components/Card/Card';
+import { useAuth } from '../../contexts/useAuth';
 import './Requerimentos.css';
 
 export function Requerimentos() {
   const navigate = useNavigate();
   const isIndex = useMatch('/requerimentos');
+  const { deslogar } = useAuth();
+
+  function handleErro(erro) {
+    if (erro?.status === 401) {
+      deslogar();
+    }
+  }
 
   return (
     <>
@@ -29,7 +37,7 @@ export function Requerimentos() {
           </section>
         </>
       )}
-      <Outlet />
+      <Outlet context={{ handleErro }} />
     </>
   );
 }

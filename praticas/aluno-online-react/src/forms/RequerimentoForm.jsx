@@ -1,9 +1,12 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/useAuth';
+import requerimentosService from '../services/requerimentoService';
 import './RequerimentoForm.css';
 
 export function RequerimentoForm() {
   const navigate = useNavigate();
+  const { deslogar } = useAuth();
   const hoje = new Date().toLocaleDateString('pt-BR');
 
   const {
@@ -17,9 +20,16 @@ export function RequerimentoForm() {
     },
   });
 
-  function onSubmit(data) {
-    console.log('Novo Requerimento:', data);
-    reset({ data: hoje });
+  async function onSubmit(data) {
+    try {
+      await requerimentosService.cadastrar(data);
+      reset({ data: hoje });
+      navigate('/requerimentos');
+    } catch (erro) {
+      if (erro?.status === 401) {
+        deslogar();
+      }
+    }
   }
 
   return (

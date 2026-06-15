@@ -1,17 +1,57 @@
-const BASE_URL = "http://localhost:3000";
+import authService from './authService'
 
-export async function listarRequerimentos() {
-  const response = await fetch(`${BASE_URL}/requerimentos`);
-  return response.json();
+const API_URL = 'http://localhost:3000'
+
+function getHeaders() {
+  const token = authService.getToken()
+  return {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${token}`,
+  }
 }
 
-export async function cadastrarRequerimento(requerimento) {
-  const response = await fetch(`${BASE_URL}/requerimentos`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+async function listar() {
+  const token = authService.getToken()
+  if (!token) throw { status: 401, message: 'Não autorizado' }
+
+  const response = await fetch(`${API_URL}/requerimentos`, {
+    headers: getHeaders(),
+  })
+
+  if (response.status === 401) throw { status: 401, message: 'Não autorizado' }
+
+  return response.json()
+}
+
+async function cadastrar(requerimento) {
+  const token = authService.getToken()
+  if (!token) throw { status: 401, message: 'Não autorizado' }
+
+  const response = await fetch(`${API_URL}/requerimentos`, {
+    method: 'POST',
+    headers: getHeaders(),
     body: JSON.stringify(requerimento),
-  });
-  return response.json();
+  })
+
+  if (response.status === 401) throw { status: 401, message: 'Não autorizado' }
+
+  return response.json()
 }
+
+async function remover(id) {
+  await fetch(`${API_URL}/requerimentos/${id}`, {
+    method: 'DELETE',
+    headers: getHeaders(),
+  })
+}
+
+async function atualizar(id, requerimento) {
+  const response = await fetch(`${API_URL}/requerimentos/${id}`, {
+    method: 'PUT',
+    headers: getHeaders(),
+    body: JSON.stringify(requerimento),
+  })
+  return response.json()
+}
+
+export default { listar, cadastrar, remover, atualizar }

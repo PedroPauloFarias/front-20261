@@ -1,23 +1,31 @@
-import { useState } from 'react';
-import { AuthContext } from './AuthContext';
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { AuthContext } from './AuthContext'
+import authService from '../services/authService'
 
 export function AuthProvider({ children }) {
-  const [autenticado, setAutenticado] = useState(false);
-  const [usuario, setUsuario] = useState(null);
+  const navigate = useNavigate()
 
-  function login(dadosUsuario) {
-    setUsuario(dadosUsuario);
-    setAutenticado(true);
+  const [usuario, setUsuario] = useState(() => authService.getUsuario())
+  const [autenticado, setAutenticado] = useState(() => authService.isAutenticado())
+
+  async function logar(email, senha) {
+    const { usuario: dadosUsuario } = await authService.login(email, senha)
+    setUsuario(dadosUsuario)
+    setAutenticado(true)
+    navigate('/dashboard')
   }
 
-  function logout() {
-    setUsuario(null);
-    setAutenticado(false);
+  function deslogar() {
+    authService.logout()
+    setUsuario(null)
+    setAutenticado(false)
+    navigate('/login')
   }
 
   return (
-    <AuthContext.Provider value={{ autenticado, usuario, login, logout }}>
+    <AuthContext.Provider value={{ usuario, autenticado, logar, deslogar }}>
       {children}
     </AuthContext.Provider>
-  );
+  )
 }
