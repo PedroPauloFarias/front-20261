@@ -3,18 +3,23 @@ import { useAuth } from '../../contexts/useAuth';
 import './Login.css';
 
 export function Login() {
-  const { login } = useAuth();
+  const { logar } = useAuth();
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState('');
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     if (!email || !senha) {
       setErro('Preencha todos os campos.');
       return;
     }
-    login({ email });
+    try {
+      setErro('');
+      await logar(email, senha);
+    } catch (e) {
+      setErro(e.message || 'Credenciais inválidas.');
+    }
   }
 
   return (

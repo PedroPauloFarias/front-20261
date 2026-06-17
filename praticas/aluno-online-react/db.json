@@ -1,17 +1,11 @@
 {
-  "requerimentos": [
+  "requerimentos": [],
+  "usuarios": [
     {
-      "id": "1",
-      "tipo": "Segunda Via de Diploma",
-      "descricao": "Solicitação de segunda via do diploma de graduação.",
-      "status": "pendente"
-    },
-    {
-      "tipo": "oi",
-      "descricao": "oiiiiii",
-      "status": "pendente",
-      "id": "bORES8rwOKY"
+      "id": 1,
+      "email": "aluno@aluno.com",
+      "senha": "123456",
+      "nome": "Aluno Teste"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
